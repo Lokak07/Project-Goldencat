@@ -138,7 +138,10 @@
         </div>
         <button type="submit" class="btn btn-block">Login</button>
     </form>
-    <p class="text-center mt-3">Don't have an account? <a href="/register" class="custom-link">Register here</a></p>
+    <p class="text-center mt-3">
+        Don't have an account? 
+        <a th:href="@{http://{backendVmIp}:8080/register (backendVmIp=${backendVmIp})}" class="custom-link">Register here</a>
+    </p>
 
     <div th:if="${param.error}" class="alert alert-danger mt-3 text-center">
         Invalid username or password.
